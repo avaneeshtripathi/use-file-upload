@@ -1,5 +1,5 @@
 import React from 'react';
-import FileUploader from '../component/file-uploader'
+import { FileUploader } from '../component'
 
 export default class Container extends React.Component {
 	uploadFile = (fileData) => {
