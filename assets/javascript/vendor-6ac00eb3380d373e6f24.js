@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "/React-fileUploader/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 192);
@@ -1633,4 +1633,4 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//     Underscor
 /***/ })
 
 /******/ });
-//# sourceMappingURL=vendor-f1efec252604911aec8e.js.map
+//# sourceMappingURL=vendor-6ac00eb3380d373e6f24.js.map
