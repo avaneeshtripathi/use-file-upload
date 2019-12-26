@@ -1,4 +1,4 @@
-# React-fileUploader
+# file-uploader
 **Simple File Uploader in React (Select OR Drag and Drop)**
 
 **[Demo Here](https://avaneeshtripathi.github.io/React-fileUploader/)**
