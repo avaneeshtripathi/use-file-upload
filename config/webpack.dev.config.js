@@ -14,7 +14,7 @@ module.exports = {
 	output: {
 		filename: 'assets/javascript/[name]-[hash].js',
 		path: path.join(__dirname, '../build'),
-		publicPath: env === 'production' ? '/React-fileUploader/' : '/'
+		publicPath: env === 'production' ? '/file-uploader/' : '/'
 	},
 	module: {
 		loaders: [
