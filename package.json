@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
-  "engines": {
-    "node": "7.4.0"
-  },
   "scripts": {
     "webpack": "webpack",
     "start": "webpack-dev-server --config ./config/webpack.dev.config.js --content-base app --host 127.0.0.1 --port 1234 --colors",

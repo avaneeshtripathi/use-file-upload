@@ -1,36 +1,43 @@
 import React from 'react';
-import { FileUploader } from '../component'
+import styles from './index.scss';
+import { FileUploader } from '../component';
 
 export default class Container extends React.Component {
-	uploadFile = (fileData) => {
-		const formData = new FormData();
-		formData.append('file', fileData); // FormData can be sent to the server to store file.
+    state = {
+        playerName: 'avaneesh',
+        active: false,
+    };
 
-		const reader = new FileReader();
-		reader.readAsDataURL(formData.get('file')); // Read the file as DataURL, Text, ArrayBuffer or BinaryString.
-		reader.onload = this.loadHandler; // To be called once the file is loaded.
-	};
+    componentDidMount() {
+        // const playerName = prompt('Enter Player Name');
+        // this.setState({
+        //     playerName: playerName,
+        // });
+        document.addEventListener('click', this.makePlayerJump);
+    }
 
-	loadHandler = (event) => {
-		const file = event.target.result;
-		this.processData(file);
-	};
+    makePlayerJump = () => {
+        this.setState({ active: true });
+        setTimeout(() => this.setState({ active: false }), 500);
+    };
 
-	processData = (data) => {
-		console.log(data); // Data can be accessed here if needed on the frontend.
-	};
-
-	render() {
-		return (
-			<FileUploader
-				onUpload={this.uploadFile}
-				expectedFileTypes={['csv']}
-				fileTypeError="Select a valid file format"
-				noFileError="Select a file to upload"
-				headerLabel="Upload file"
-				inputLabel="Choose a file or Drag and drop here"
-				buttonLabel="Upload"
-			/>
-		);
-	}
-};
+    render() {
+        const { playerName, active = {} } = this.state;
+        return (
+            <div className={styles.container}>
+                {playerName && (
+                    <div
+                        className={`${styles.player} ${
+                            active ? styles.active : ''
+                        }`}
+                    >
+                        {playerName}
+                    </div>
+                )}
+                <marquee behavior="scroll" className={styles.pathWayWrapper}>
+                    <div className={styles.pathWay} />
+                </marquee>
+            </div>
+        );
+    }
+}
