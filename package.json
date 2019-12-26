@@ -10,7 +10,7 @@
     "predeploy": "npm run build:prod",
     "deploy": "gh-pages -b gh-pages -d build"
   },
-  "homepage": "https://avaneeshtripathi.github.io/React-fileUploader",
+  "homepage": "https://avaneeshtripathi.github.io/file-uploader",
   "author": "avaneesh tripathi",
   "license": "ISC",
   "devDependencies": {
