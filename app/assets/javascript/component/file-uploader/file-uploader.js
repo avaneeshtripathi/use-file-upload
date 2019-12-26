@@ -37,6 +37,8 @@ class FileUploader extends React.Component {
 	uploadFile = (ev) => {
 		ev.preventDefault();
 		const { fileInfo } = this.state;
+		if (!fileInfo) return;
+
 		const { noFileError, fileTypeError, expectedFileTypes } = this.props;
 		const uploadedFileType = this.getFileExtension(fileInfo.name);
 
